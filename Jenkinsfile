@@ -1,5 +1,8 @@
-node {
-    
+pipeline {
+    agent none
+	
+	stages{
+	
     stage("Checkout code from github") {
         
         echo "Checking out code from master"
@@ -20,5 +23,6 @@ node {
         echo "this is stage 3"
         
     }
+	}
     
 }
