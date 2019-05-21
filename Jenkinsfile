@@ -16,11 +16,11 @@ stage("check")
         
     }
 }*/
- println(scm.branches[0].name)
+ branch_name = scm.branches[0].name
 artifact_home = System.getProperty("user.home")
-dir(artifact_home+env.BRANCH_NAME)
+dir(artifact_home+"\"+JOB_NAME+"\"+branch_name+"\"+BUILD_NUMBER)
 {
-    folder = artifact_home+env.GIT_BRANCH
+    folder = artifact_home+"\"+JOB_NAME+"\"+branch_name+"\"+BUILD_NUMBER
     if(!fileExists('/'))
     {
        bat "mkdir ${folder}"
