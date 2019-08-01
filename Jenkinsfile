@@ -19,7 +19,7 @@ dir(artifact_home+"\\"+JOB_NAME+"\\"+branch_name.split("/")[1]+"\\"+BUILD_NUMBER
         bat "dir ${artifact_home}"
        println(scm.branches[0].name)
     }
-}*/
 }
+}8?
 
 }
