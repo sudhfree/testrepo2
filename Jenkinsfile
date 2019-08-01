@@ -9,14 +9,9 @@ stage("checkout")
 }
 stage("check")
 {
- /*  dir() {
-    // some block
-    if(fileExists '/')
-    {
-        
-    }
-}*/
- branch_name = scm.branches[0].name
+ bat 'dir'
+}
+ /*branch_name = scm.branches[0].name
 artifact_home = System.getProperty("user.home")
 dir(artifact_home+"\\"+JOB_NAME+"\\"+branch_name.split("/")[1]+"\\"+BUILD_NUMBER)
 {
@@ -27,7 +22,7 @@ dir(artifact_home+"\\"+JOB_NAME+"\\"+branch_name.split("/")[1]+"\\"+BUILD_NUMBER
         bat "dir ${artifact_home}"
        println(scm.branches[0].name)
     }
-}
+}*/
 }
 
 }
